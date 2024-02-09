@@ -1,23 +1,3 @@
-import numpy as np
-import pandas as pd
-from pydantic import BaseModel
-from scipy import stats
-
-class Design(BaseModel):
-    """Дата-класс с описание параметров эксперимента.
-    
-    statistical_test - тип статтеста. ['ttest']
-    effect - размер эффекта в процентах
-    alpha - уровень значимости
-    beta - допустимая вероятность ошибки II рода
-    """
-    statistical_test: str
-    effect: float
-    alpha: float
-    beta: float
-    
-    class ExperimentsService:
-
     def estimate_sample_size(self, metrics, design):
         """Оцениваем необходимый размер выборки для проверки гипотезы о равенстве средних.
         
