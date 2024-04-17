@@ -1,0 +1,16 @@
+name: bolt-task
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pandas=2.2
+  - seaborn
+  - ipykernel
+  - nbformat
+  - pylint
+  - black
+  - flake8
+  - mypy
+  - pip
+  - jupyterlab
+  - tabulate
